@@ -317,6 +317,7 @@ export default function HomePage() {
       
       <div id="footer" data-section="footer">
         <FooterSocial
+          logoText="F1 Racing"
           columns={[
             {
               title: "Models",
