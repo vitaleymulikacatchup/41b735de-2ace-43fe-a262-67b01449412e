@@ -3,7 +3,6 @@ import { Fraunces } from "next/font/google";
 import "./globals.css";
 import { PostHogWrapper } from "@/components/PostHogWrapper";
 import Tag from "@/tag/Tag";
-import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -51,20 +50,7 @@ export default function RootLayout({
       <PostHogWrapper>
         <body className={`${fraunces.variable} antialiased`}>
           <Tag />
-          <ThemeProvider
-            defaultButtonVariant="expand-hover"
-            defaultTextAnimation="entrance-slide"
-            borderRadius="sharp"
-            contentWidth="medium"
-            sizing="large"
-            background="gradientBars"
-            cardStyle="glass-elevated"
-            primaryButtonStyle="flat"
-            secondaryButtonStyle="glass"
-            showBlurBottom={true}
-          >
-            {children}
-          </ThemeProvider>
+          {children}
         
         <script
           dangerouslySetInnerHTML={{
